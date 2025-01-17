@@ -30,9 +30,9 @@ export function Bio({ name, title, skills, description, socialLinks }: BioProps)
   return (
     <div className="bio-container">
       <div className="terminal-line">
-        <span className="prompt">user@hackerbio:~$</span>
+        <span className="prompt">fxd@bio:~$</span>
         <span className="command">{displayedCommand}</span>
-        <span className="cursor">_</span>
+        {!isTypingComplete && <span className="cursor">_</span>}
       </div>
       
       {isTypingComplete && (
